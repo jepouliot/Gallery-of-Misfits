@@ -1,0 +1,627 @@
+body {
+	background-color: rgb(56,34,33);
+	color: #FFFFFF;
+}
+
+article, nav, hr {
+	max-width: 1000px;
+	margin: auto;
+}
+
+hr {
+	margin: auto auto 5px;
+	color: white;
+	border: 1px solid;
+	border-style: inset;
+}
+
+.h1_div {
+	max-width: 1000px;
+	margin: auto;
+}
+h1 {
+	margin: auto;
+	color: white;
+	font-size: 28px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 100;
+}
+h2 {
+	color: #382221;
+	font-size: 32px;
+	font-family: Montserrat, sans-serif;
+}
+h3 {
+	color: #382221;
+	font-family: Montserrat, sans-serif;
+	font-size: 20px;
+	font-weight: lighter;
+}
+article p, article a {
+	color: #382221;
+	font-family: Quicksand, sans-serif;
+	font-size: 14px;
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFFFFF;
+}
+
+.hidden {
+    display: none!important;
+}
+
+/*defining flexes*/
+.flexbox {
+	display: flex;
+}
+.horizontal_flex {
+	flex-direction: row;
+}
+.vertical_flex {
+	flex-direction: column;
+}
+.centered {
+	text-align: center;
+}
+
+nav {
+	align-content: center;
+}
+.nav_links {
+	flex-basis: 23%; /*links take up all but the rightmost 4% of screen, which belongs to the social media buttons*/
+	padding: 0px 20px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 24px;
+	border: 1px solid rgb(56,34,33); /*same as background, so invisible. BUT, it makes it so they don't "bounce" when they mouseover border appears*/
+}
+.nav_links:link, .nav_links:visited {
+	text-decoration: none;
+}
+.nav_links:hover, .nav_links:active {
+	background-color: #694947;
+	border: 1px solid white; /*if you remove this mouseover border or alter weight, also remove the border under ".nav_links". otherwise items will "bounce" on mouseover.*/
+}
+
+.art-nav-bar {
+	width: 375px; /*this is roughly its width -- if centering is off, change thing and consider finding a way to avoid declaring its width altogether*/
+	margin: auto;
+	margin-bottom: 15px;
+}
+.art-nav-button { /*individual buttons*/
+	background-color: #7a514e;
+	padding: 10px;
+	white-space: nowrap; /*stops Personal Art from wrapping*/
+}
+.art-nav-button-active { /*button for the page you're on*/
+	background-color: #FFFFFF;
+	color: #382221!important;
+	padding: 10px;
+	white-space: nowrap; /*stops Personal Art from wrapping*/
+}
+
+
+/*INDIVIDUAL STYLING THINGS*/
+#homepage_art_links {
+	width: 100%;
+	justify-content: space-around;
+}
+.homepage_boxes {
+	text-align: center;
+	color: #382221;
+	background: #FFFFFF;
+}
+.homepage_boxes p {
+	padding: 0% 10%;
+}
+
+footer {
+	text-align: center;
+	max-width: 1000px;
+	margin: auto;
+}
+.contact_button {
+	display: inline-block; /*this makes it so the div doesn't take up the whole width*/
+	font-size: 22px;
+	text-decoration: none;
+	background-color: #694947;
+	border: 1px solid #FFFFFF;
+	padding: 1em;
+	margin-top: 1em;
+	margin-right: 1em; /*to keep the mobile social buttons distanced*/
+}
+/*to behave like a button..., do the following: */
+.contact_button:hover {
+	cursor: pointer;
+	background-color: #7a514e;
+}
+
+/*CONTACTS PAGE*/
+
+#contact_form {/*the labels and input boxes (and submit button)*/
+	padding: 1em;
+}
+#contact_page, #about_page { /*whole CONTACT and ABOUT <article>*/
+	color: #382221;
+	background-color: #ffffff;
+	max-width: 1000px;
+	margin: auto;
+}
+#contact_page a {
+	text-decoration: none;
+}
+#contact_page .adi_email {
+	color: black;
+}
+#commission_download_button {
+	padding: 8px;
+	color: white;
+	background-color: #694947;
+	border: 3px solid #d1d1d1;
+	font-size: 22px;
+}
+#commission_download_button:hover {
+	background-color: #7a514e;
+}
+#contact_page input { /*ALL inputs except textarea*/
+	height: 2em;
+	margin-top: 5px;
+	margin-bottom: 8px;
+	border: 1px solid;
+}
+#contact_page textarea {
+	border: 1px solid;
+	margin-top: 5px;
+	margin-bottom: 8px;
+}
+.contact1 { /*boxes, except for email and phone*/
+	width: 90%;
+}
+#contact_row {/*the FLEXBOX for EMAIL and PHONE*/
+	flex-direction: row;
+	width: 90%;
+}
+.contact2 {
+	flex-grow: 1;
+}
+#contact_page_text {
+	text-align: center;
+	padding: 1em;
+	margin: auto;
+}
+
+/*ABOUT PAGE*/
+.about_text {
+	padding: 15px;
+	line-height: 1.875;
+}
+.about_text blockquote {
+	color: #382221;
+	font-family: Quicksand, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	line-height: 1.2;
+}
+
+/*ART PAGES*/
+.carousel-container {
+    width: 75vw;
+    height: 75vh;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+	background-color: rgb(56,34,33);
+}
+
+.carousel-container-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 701;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+	background-color: rgb(56,34,33);
+
+}
+
+.carousel {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.close-carousel { /*Button to close carousel. Hidden by default, using the ".hidden" class*/
+    position: absolute;
+    padding: 0;
+    font-size: 70px;
+    top: 5px;
+    left: 5px;
+    line-height: 45px;
+    border: none;
+    color: white!important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 999;
+}
+.close-carousel:hover {
+    cursor: pointer;
+}
+
+/*DESKTOP VERSION*/
+@media (min-width: 800px){
+	nav {
+		flex-direction: row;
+	}
+	.mobile_nav_opener {
+		display: none;
+	}
+	.social-media-button_bottom {/*hide the desktop version!*/
+		display: none;
+	}
+	.social-media-button_top {
+		padding: 0px 20px;
+		flex-basis: 8%;
+		align-items: center;
+	}
+	.social-media-button_top img {
+		width: 30px;
+	}
+	.social-media-button_top a:hover { /*if their background changes like the rest of the links on the page, it doesn't line up with with the images.*/
+		background: rgb(56,34,33);
+		border: none;
+	}
+	#eyes-and-text {
+		position: relative;
+	}
+	#eyes-text {
+		color: white;
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		padding: 35px;
+		text-align: center;
+		transform: translate(-50%);
+		background: radial-gradient(rgba(0,0,0,1),rgba(0,0,0,0.0) 70%);
+	}
+	#eyes-logo { /*just the image*/
+		text-align: center;
+		width: 100%;
+	}
+
+	/*DESKTOP ART PAGE*/
+	#homepage_art_links {
+		flex-direction: row;
+	}
+	.homepage_boxes {
+		flex-direction: column;
+		margin: 2.5%;
+	}
+	.homepage_boxes img {
+		width: 100%;
+	}
+
+	/*DESKTOP CONTACT PAGE*/
+	#contact_page {
+		flex-direction: row;
+	}
+	#contact_page_text {
+		flex-basis: 50%;
+	}
+	#contact_form {
+		flex-basis: 50%;
+	}
+
+	/*desktop about page*/
+	#about_page {
+		max-height: 700px; /*this is a hacky way to kill 4 extra lines of white space that were below the pic for some reason*/
+		flex-direction: row;
+	}
+	#adi-about-pic {
+		flex-shrink: 1;
+		width: 100%;
+	}
+}
+
+/*MOBILE VERSION*/
+@media (max-width: 800px){
+	body {
+		font-size: 110%;
+	}
+	nav {
+		flex-direction: column;
+		display: none; /*we will unhide with javascript when clicking menu button*/
+	}
+	.social-media-button_top {/*hide the desktop version!*/
+		display: none;
+	}
+	.social-media-button_bottom {
+		padding: 5px;
+	}
+	.social-media-button_bottom img {
+		margin-top: 5px;
+		width: 30px;
+	}
+	.social-media-button_bottom a:hover { /*if their background changes like the rest of the links on the page, it doesn't line up with with the images.*/
+		background: rgb(56,34,33);
+		border: none;
+	}
+
+
+	/*MOBILE HOME PAGE*/
+	#eyes-and-text {
+		position: relative;
+	}
+	#eyes-text {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		text-align: center;
+		transform: translate(-50%);
+		background: radial-gradient(rgba(0,0,0,1),rgba(0,0,0,0.0) 70%);
+	}
+	#eyes-logo { /*just the image*/
+		text-align: center;
+		width: 100%;
+	}
+	#homepage_art_links {
+		flex-direction: column;
+
+	}
+	.homepage_boxes {
+		flex-direction: row;
+		align-items: center;
+		margin: 2.5%;
+	}
+	.homepage_boxes img, .homepage_boxes div { /*so text and img are equally spaced on mobile*/
+		width: 50%;
+	}
+	/*MOBILE CONTACT PAGE*/
+	#contact_page {
+		flex-direction: column;
+	}
+	
+	/*MOBILE ABOUT PAGE*/
+	#about_page {
+		flex-direction: column;
+	}
+	#about_page blockquote {
+		margin-inline-start: 20px;
+    	margin-inline-end: 20px;
+	}
+}
+
+
+/*BOOTSTRAP CAROUSEL STUFF*/
+.carousel {
+	position: relative;
+  }
+  
+  .carousel.pointer-event {
+	touch-action: pan-y;
+  }
+  
+  .carousel-inner {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+  }
+  .carousel-inner::after {
+	display: block;
+	clear: both;
+	content: "";
+  }
+  
+  .carousel-item {
+	position: relative;
+	display: none;
+	float: left;
+	width: 100%;
+	margin-right: -100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: transform 0.6s ease-in-out;
+  }
+  @media (prefers-reduced-motion: reduce) {
+	.carousel-item {
+	  transition: none;
+	}
+  }
+  
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+	display: block;
+  }
+  
+  /* rtl:begin:ignore */
+  .carousel-item-next:not(.carousel-item-start),
+  .active.carousel-item-end {
+	transform: translateX(100%);
+  }
+  
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start {
+	transform: translateX(-100%);
+  }
+  
+  /* rtl:end:ignore */
+  .carousel-fade .carousel-item {
+	opacity: 0;
+	transition-property: opacity;
+	transform: none;
+  }
+  .carousel-fade .carousel-item.active,
+  .carousel-fade .carousel-item-next.carousel-item-start,
+  .carousel-fade .carousel-item-prev.carousel-item-end {
+	z-index: 1;
+	opacity: 1;
+  }
+  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 0s 0.6s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+	.carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+	  transition: none;
+	}
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15%;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+	background: none;
+	border: 0;
+	opacity: 0.5;
+	transition: opacity 0.15s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+	.carousel-control-prev,
+  .carousel-control-next {
+	  transition: none;
+	}
+  }
+  .carousel-control-prev:hover, .carousel-control-prev:focus,
+  .carousel-control-next:hover,
+  .carousel-control-next:focus {
+	color: #fff;
+	text-decoration: none;
+	outline: 0;
+	opacity: 0.9;
+  }
+  
+  .carousel-control-prev {
+	left: 0;
+  }
+  
+  .carousel-control-next {
+	right: 0;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 100% 100%;
+  }
+  
+  /* rtl:options: {
+	"autoRename": true,
+	"stringMap":[ {
+	  "name"    : "prev-next",
+	  "search"  : "prev",
+	  "replace" : "next"
+	} ]
+  } */
+  .carousel-control-prev-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  }
+  
+  .carousel-control-next-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+  
+  .carousel-indicators {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin-right: 15%;
+	margin-bottom: 1rem;
+	margin-left: 15%;
+	list-style: none;
+  }
+  .carousel-indicators [data-bs-target] {
+	box-sizing: content-box;
+	flex: 0 1 auto;
+	width: 30px;
+	height: 3px;
+	padding: 0;
+	margin-right: 3px;
+	margin-left: 3px;
+	text-indent: -999px;
+	cursor: pointer;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	opacity: 0.5;
+	transition: opacity 0.6s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+	.carousel-indicators [data-bs-target] {
+	  transition: none;
+	}
+  }
+  .carousel-indicators .active {
+	opacity: 1;
+  }
+  
+  .carousel-caption {
+	position: absolute;
+	right: 15%;
+	bottom: 1.25rem;
+	left: 15%;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	color: #fff;
+	text-align: center;
+  }
+  
+  .carousel-dark .carousel-control-prev-icon,
+  .carousel-dark .carousel-control-next-icon {
+	filter: invert(1) grayscale(100);
+  }
+  .carousel-dark .carousel-indicators [data-bs-target] {
+	background-color: #000;
+  }
+  .carousel-dark .carousel-caption {
+	color: #000;
+  }

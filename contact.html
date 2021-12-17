@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery of Misfits</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat"> 
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand"> 
+  </head>
+  <body>
+  <script src="index.js"></script>
+  <div class="h1_div"><h1>GALLERY OF MISFITS</h1></div>    
+  <hr/>
+    <nav class="flexbox">
+      <a class="nav_links" href="C:/Users/jepou/Documents/HTML Practice/taiadimartinez.com/index.html">Home</a>
+      <a class="nav_links" href="C:/Users/jepou/Documents/HTML Practice/taiadimartinez.com/paintings.html">Art</a>
+      <a class="nav_links" href="C:/Users/jepou/Documents/HTML Practice/taiadimartinez.com/about.html">About</a>
+      <a class="nav_links" href="C:/Users/jepou/Documents/HTML Practice/taiadimartinez.com/contact.html">Contact</a>
+        <!--DESKTOP TWITTER BUTTON-->
+      <a class="social-media-button_top" href="https://twitter.com/misfitsgallery">
+        <img src="C:/Users/jepou/Documents/HTML Practice/taiadimartinez.com/images/Brown Twitter Logo.png"
+        alt="Twitter logo">   
+      </a>
+      <!--DESKTOP INSTAGRAM BUTTON-->
+      <a class="social-media-button_top" href="https://www.instagram.com/galleryofmisfits/">
+        <img src="C:/Users/jepou/Documents/HTML Practice/taiadimartinez.com/images/White Instagram Logo.png"
+        alt="Instagram logo">    
+      </a>
+    </nav>
+    <article>
+        <div id="contact_page" class="flexbox">
+            <div id="contact_page_text"> <!--CONTACTS PAGE TEXT-->
+                <h2>CONTACT & COMMISSIONS</h2>
+                <p>No skimping on the details -- the more I know, the better!
+                </p>
+                <p>Greater Boston Area, MA, USA
+                </p>
+                <p>PHONE NUMBER????
+                </p>
+                <a class="adi_email" href="mailto:tai.adi.martinez@gmail.com">tai.adi.martinez@gmail.com</a>
+                <br/><br/><br/>
+                <h3>SAMPLE COMMISSION AGREEMENT</h3>
+                <p>This sample is for informational purposes only. Agreements are not valid without the artist's signature.
+                </p>
+                <br/>
+                <!--DOWNLOAD BUTTON; the target makes it open in a new window-->
+                <a id="commission_download_button" target="_blank" href="Tai Adi Martinez SAMPLE Commission Agreement.pdf" download="Tai Adi Martinez SAMPLE Commission Agreement.pdf">Download</a>
+            </div>
+            <div id="contact_form"> <!--CONTACTS FORM-->
+                <form action="email.php">
+                    <label for="name">Full Name</label><br/>
+                        <input class="contact1" placeholder="Jane Doe" type="text" id="name" name="name" autocomplete="name" minlength="1" maxlength="50" required novalidate><br/>
+                    <label for="address1">Address Line 1</label><br/>
+                        <input class="contact1" placeholder="123 Main Street" type="text" id="address1" name="address1" autocomplete="address-level1" minlength="1" maxlength="100" required novalidate><br/>
+                    <label for="address2">Address Line 2</label><br/>
+                        <input class="contact1" placeholder="Boston, MA" type="text" id="address2" name="address2" autocomplete="address-level2" minlength="1" maxlength="100" required novalidate><br/>
+                    <div class="flexbox" id="contact_row">
+                        <div class="contact2">
+                            <label for="email">Email</label><br/>
+                            <input placeholder="example@email.com"type="email" id="email" name="email" minlength="1" maxlength="100" required novalidate>
+                        </div>
+                        <div class="contact2"><label for="phone">Phone</label><br/>
+                            <input id="phone_box" placeholder="123-456-7890 x1234" type="tel" id="phone" name="phone" required minlength="1" maxlength="100" required novalidate>
+                        </div>
+                    </div>
+                    <label for="subject">Subject</label><br/>
+                        <input class="contact1" placeholder="Type your subject here..." type="tel" id="phone" name="phone" required minlength="1" maxlength="100" required novalidate><br/>
+                    <label for="message">Message</label><br/>
+                        <textarea class="contact1" placeholder="Type your message here..." id="message" name="story" rows="5" cols="33" required novalidate></textarea><br/>
+                    <input type="submit" value="Submit">
+                    <button type="submit">Submit</button>
+                </form> 
+            </div>
+        </div>
+    </article>
+    <footer>
+      <!--MOBILE TWITTER BUTTON-->
+      <a class="social-media-button_bottom" href="https://twitter.com/misfitsgallery">
+        <img src="C:/Users/jepou/Documents/HTML Practice/taiadimartinez.com/images/Brown Twitter Logo.png"
+        alt="Twitter logo">   
+      </a>
+      <!--MOBILE INSTAGRAM BUTTON-->
+      <a class="social-media-button_bottom" href="https://www.instagram.com/galleryofmisfits/">
+        <img src="C:/Users/jepou/Documents/HTML Practice/taiadimartinez.com/images/White Instagram Logo.png"
+        alt="Instagram logo">    
+      </a>
+      <p class="copyright_text">©2021 by Gallery of Misfits.
+      </p>
+    </footer>
+  </body>
+</html>
